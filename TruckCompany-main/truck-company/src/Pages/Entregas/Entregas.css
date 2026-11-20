@@ -1,0 +1,44 @@
+.app-page { min-height: 100svh; background: var(--asfalto); color: #fff; padding: 132px 24px 96px; }
+.app-wrap { max-width: 1000px; margin: 0 auto; }
+.app-page h1 { font: 800 clamp(34px, 5vw, 56px) / 1 var(--display); letter-spacing: -0.03em; }
+.app-sub { margin: 12px 0 32px; color: rgba(255, 255, 255, 0.65); }
+.sr-only { position: absolute; left: -9999px; }
+.busca { position: relative; display: block; }
+.busca svg { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: rgba(255, 255, 255, 0.5); }
+.busca input { width: 100%; height: 56px; padding: 0 22px 0 52px; border-radius: 999px; border: 1.5px solid var(--linha); background: var(--pista); color: #fff; font: 400 16px var(--corpo); }
+.busca input:focus { outline: none; border-color: var(--laranja); box-shadow: 0 0 0 4px rgba(255, 90, 31, 0.2); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 28px; }
+.chip { height: 40px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--linha); background: transparent; color: rgba(255, 255, 255, 0.8); font: 500 14px var(--corpo); cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+.chip:hover { border-color: rgba(255, 255, 255, 0.4); }
+.chip-on { background: var(--laranja); border-color: var(--laranja); color: var(--asfalto); font-weight: 600; }
+
+.entregas { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.entrega { background: var(--pista); border: 1px solid var(--linha); border-radius: var(--raio); padding: 20px 24px; }
+.entrega-topo { display: grid; grid-template-columns: minmax(150px, 1.2fr) minmax(90px, 1fr) minmax(130px, 1fr) auto auto; align-items: center; gap: 20px; }
+.ponto { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.ponto svg { flex: none; width: 20px; height: 20px; color: var(--laranja); }
+.ponto small { display: block; font-size: 12px; color: rgba(255, 255, 255, 0.55); }
+.ponto strong { display: block; font-weight: 600; font-size: 15px; }
+.trilho { position: relative; height: 6px; border-radius: 3px; background: var(--linha); }
+.trilho-cheio { height: 100%; border-radius: 3px; background: var(--laranja); }
+.trilho-caminhao { position: absolute; top: -9px; width: 24px; height: 24px; padding: 3px; border-radius: 50%; background: #fff; color: var(--asfalto); transform: translateX(-50%); }
+.status { padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+.status-rota { background: rgba(255, 90, 31, 0.18); color: #ff8a5c; }
+.status-ok { background: rgba(47, 191, 113, 0.18); color: #5fdc98; }
+.status-espera { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.8); }
+.detalhes { border: 0; background: transparent; color: #ffc400; font: 600 14px var(--corpo); cursor: pointer; padding: 8px 4px; }
+.detalhes:hover { text-decoration: underline; text-underline-offset: 3px; }
+.entrega-det { margin-top: 16px; padding-top: 16px; border-top: 3px dashed var(--linha); display: flex; flex-wrap: wrap; gap: 32px; }
+.entrega-det dt { font-size: 12px; color: rgba(255, 255, 255, 0.55); }
+.entrega-det dd { font-weight: 600; }
+.vazio { padding: 48px 0; text-align: center; color: rgba(255, 255, 255, 0.65); }
+.app-nota { margin-top: 36px; color: rgba(255, 255, 255, 0.65); }
+.app-nota a { color: #fff; font-weight: 600; text-underline-offset: 3px; }
+.app-nota a:hover { color: var(--laranja); }
+
+@media (max-width: 860px) {
+  .entrega-topo { grid-template-columns: 1fr 1fr; }
+  .trilho { grid-column: 1 / -1; order: 3; margin: 6px 12px; }
+  .status { justify-self: start; }
+  .detalhes { justify-self: end; }
+}

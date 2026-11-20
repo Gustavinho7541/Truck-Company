@@ -1,0 +1,7 @@
+.toast {
+  position: fixed; left: 50%; bottom: 28px; z-index: 100; transform: translate(-50%, 24px);
+  padding: 14px 24px; border-radius: 999px; background: #fff; color: var(--asfalto); font-weight: 600;
+  border-left: 8px solid #2fbf71; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.25s;
+}
+.toast-on { opacity: 1; transform: translate(-50%, 0); }
