@@ -1,3 +1,0 @@
-.notfound { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 120px 24px 64px; text-align: center; background: var(--asfalto); color: #fff; }
-.notfound h1 { font: 800 clamp(32px, 5vw, 56px) / 1.05 var(--display); letter-spacing: -0.03em; }
-.notfound p { color: rgba(255, 255, 255, 0.68); margin-bottom: 12px; }
